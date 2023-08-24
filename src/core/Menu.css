@@ -1,0 +1,42 @@
+.menu-serch {
+  display: none !important;
+}
+
+@media (max-width: 575.98px) {
+  .makeStyles-menuButton-2 {
+    display: none !important;
+  }
+
+  .MuiToolbar-regular {
+    position: relative;
+  }
+
+  .makeStyles-sectionMobile-9,
+  .menu-burger {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #000 !important;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .makeStyles-sectionMobile-9,
+  .menu-burger {
+  }
+
+  .MuiTypography-h6 {
+    margin-left: 8rem !important;
+  }
+
+  .MuiSvgIcon-root {
+    display: none;
+  }
+
+  .menu-serch {
+    display: block !important;
+    color: #000;
+    margin-left: 4rem;
+    font-size: 23px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,246 @@
+.card {
+  /* width: 200px;
+  height: 350px; */
+  border: none !important;
+}
+
+.wrapper {
+  /* -webkit-box-sizing: border-box;
+  box-sizing: border-box; */
+  /* position: relative; */
+  /* -webkit-box-shadow: 0 0 20px 10px rgba(25, 25, 25, 0.1); */
+  /* box-shadow: 0 0 20px 10px rgba(25, 25, 25, 0.1); */
+  -webkit-transition: ease all 0.3s;
+  transition: ease all 0.3s;
+}
+
+.color_bg {
+  /* display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px; */
+}
+
+.card_img {
+  /* background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  position: absolute; */
+  /* bottom: calc(100% - 300px); */
+  width: 100%;
+  /* height: 300px; */
+  -webkit-transition: ease all 0.3s;
+  transition: ease all 0.3s;
+}
+
+.cardInfo {
+  display: block;
+  /* padding: 20px 10px 5px 10px; */
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  color: #666;
+}
+
+.cardInfo h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  /* text-align: center; */
+  font-weight: bold;
+  line-height: 1.3;
+  margin: 10px;
+}
+
+.cardInfo p {
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+.action {
+  /* width: 100%; */
+  /* display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; */
+  padding: 0 10px;
+}
+
+.priceGroup {
+  display: flex;
+}
+
+.priceGroup .price {
+  font-size: 5px;
+  color: #000;
+  text-align: left;
+}
+.priceGroup p {
+  padding: 0;
+  margin: 0;
+}
+.priceGroup p:nth-child(2) {
+  color: rgba(117, 121, 121, 0.521);
+  text-decoration: line-through;
+}
+.priceGroup p:nth-child(3) {
+  color: rgb(8, 163, 163);
+  font-weight: bold;
+}
+
+.priceGroup .price.old_price {
+  color: red;
+  font-size: 15px;
+  text-decoration: line-through;
+  text-align: left;
+}
+
+.priceGroup .price.newPrice {
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  width: 35px;
+  height: 35px;
+}
+
+.cart:hover {
+  cursor: pointer;
+}
+
+.MuiAppBar-colorPrimary {
+  /* color: #e7dede; */
+  background-color: #e3e3e3 !important;
+}
+.MuiIconButton-root {
+  color: #000 !important;
+}
+
+.MuiMenuItem-root {
+  width: 172px !important;
+  background-color: #fff !important;
+}
+
+.MuiTypography-h6 {
+  font-size: 1.25rem;
+  color: rgb(76, 53, 206) !important;
+}
+
+.clor {
+  /* background-color: #f5f5f5; Replace with your desired background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*  */
+
+.cart svg,
+.cart path,
+.cart circle {
+  stroke: currentColor;
+  fill: transparent;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+/* Media Query */
+/* Styles for mobile viewport (less than 576px) */
+@media (max-width: 575.98px) {
+  .h2-card h2 {
+    font-size: 22px !important;
+  }
+  .card {
+    /* Add your styles for .card in mobile viewport here */
+  }
+
+  .wrapper {
+    /* Add your styles for .wrapper in mobile viewport here */
+  }
+
+  .color_bg {
+    /* Add your styles for .color_bg in mobile viewport here */
+  }
+
+  .card_img {
+    /* Add your styles for .card_img in mobile viewport here */
+  }
+
+  .cardInfo {
+    /* Add your styles for .cardInfo in mobile viewport here */
+  }
+
+  .cardInfo h1 {
+    font-size: 13px;
+    margin: 6px;
+  }
+
+  .cardInfo p {
+    /* Add your styles for .cardInfo p in mobile viewport here */
+    font-size: 11px;
+  }
+
+  .action {
+    /* Add your styles for .action in mobile viewport here */
+  }
+
+  .priceGroup {
+    /* Add your styles for .priceGroup in mobile viewport here */
+  }
+
+  .priceGroup .price {
+    /* Add your styles for .priceGroup .price in mobile viewport here */
+  }
+
+  .priceGroup p:nth-child(2) {
+    /* Add your styles for .priceGroup p:nth-child(2) in mobile viewport here */
+  }
+
+  .priceGroup p:nth-child(3) {
+    /* Add your styles for .priceGroup p:nth-child(3) in mobile viewport here */
+  }
+
+  .priceGroup .price.old_price {
+    /* Add your styles for .priceGroup .price.old_price in mobile viewport here */
+  }
+
+  .priceGroup .price.newPrice {
+    /* Add your styles for .priceGroup .price.newPrice in mobile viewport here */
+    font-size: 11px;
+  }
+
+  .cart {
+    /* Add your styles for .cart in mobile viewport here */
+  }
+
+  .cart:hover {
+    /* Add your styles for .cart:hover in mobile viewport here */
+  }
+
+  .cart svg,
+  .cart path,
+  .cart circle {
+    /* Add your styles for .cart svg, .cart path, .cart circle in mobile viewport here */
+  }
+}
