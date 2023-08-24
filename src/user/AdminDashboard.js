@@ -19,7 +19,7 @@ const AdminDashboard = () => {
             </Link>
           </li>
           <li className='list-group-item'>
-            <Link className='nav-link' to='/product/:productId'>
+            <Link className='nav-link' to='/create/product'>
               Create product
             </Link>
           </li>

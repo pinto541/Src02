@@ -20,9 +20,9 @@ const useStyles = makeStyles((theme) => ({
 
   inputGroup: {
     paddingTop:'20px',
-    paddingLeft:'20px',
-    paddingRight:'20px',
-    display: 'flex',
+    paddingLeft:'30px',
+    
+    
     alignItems: 'center',
     maxWidth: 400,
     marginLeft: '10 auto',
@@ -30,13 +30,13 @@ const useStyles = makeStyles((theme) => ({
   tField: {
     flexGrow: 1,
     width: 300,
-    marginTop: 2,
+    marginTop: 0,
   },
 
 
   formControl: {
     margin: theme.spacing(1),
-    minWidth: 59,
+    minWidth: 120,
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
  
   root: {
     "& > *": {
-      margin: theme.spacing(1),
+      margin: theme.spacing(2),
     },
   },
 }));

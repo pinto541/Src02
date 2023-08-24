@@ -11,7 +11,6 @@ import Search from "./Search";
 import { prices } from "./fixedPrices";
 import Copyright from "./Copyright";
 
-
 const Shop = () => {
   const [myFilters, setMyFilters] = useState({
     filters: { category: [], price: [] },
@@ -123,8 +122,6 @@ const Shop = () => {
     <>
      <div style={{ padding: 25 }}></div>
     <Menu/>
-
-    <Search/>
       
       
       

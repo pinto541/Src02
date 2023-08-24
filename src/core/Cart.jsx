@@ -47,27 +47,22 @@ const handleSuccess=() => {
 
   swal.fire(
     'Order Successful!',
-    'Our Agent will Call You shortly',
+    'Our Agent will Call You sho rtly',
     'success'
-    ).then(function() {
-      window.location="/";
-    })
-
-}
-
-const handlefail=() => {
-
-  swal.fire(
-     'Cart is Empty',
-     'Add Produts to cart',
-     'question'
-    
     )
-    
 
 }
  
  
+
+
+
+  
+
+
+
+
+
 
 
   const handleCheckout = () => {
@@ -82,7 +77,7 @@ const handlefail=() => {
           }) 
           .catch((err) => console.log('ERROR', err));
       } else {
-       handlefail();
+        alert('No items in the cart...!');
       }
     }
   };
@@ -147,15 +142,13 @@ const handlefail=() => {
         <div
           className="container my-4 pt-2"
           style={{
-            height: "400px",
-            width:"480px",
 
             boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
           }}
         >
           <div className="row">
             <div className="col-12 col-md-10">
-              <div className="wrapper d-flex">
+              <div className="d-flex justify-content-between align-items-center">
                 <h2>Your cart</h2>
 
               </div>
@@ -166,20 +159,11 @@ const handlefail=() => {
                   <div
                     key={i}
                     className="col-12 col-md-7 my-2 clor p-1"
-                   // style={{ margin: "0 auto" }}
+                    style={{ margin: "0 auto" }}
                   >
-
-<div onClick={() => {
-                              removeItem(product._id);
-                              setRun(!run); // run useEffect in parent Cart
-                            }}
-                            style={{ cursor: "pointer" }}>
-                          <Button>❌</Button>
-                          </div>
                     <div className="card">
 
                       <div className="wrapper d-flex">
-                     
                         <div
                           className="card_img"
                           style={{
@@ -188,10 +172,15 @@ const handlefail=() => {
                             height: "240px",
                             width: "200px",
                             marginRight: "1rem",
-                            paddingBottom:"1rem"
                           }}
                         >
-                         
+
+                          <Button
+                            onClick={() => {
+                              removeItem(product._id);
+                              setRun(!run); // run useEffect in parent Cart
+                            }}
+                            style={{ cursor: "pointer", marginLeft: "19 rem" }}>❌</Button>
                           <ShowImageProd item={product} url="product" />
                         </div>
                         <div
@@ -204,16 +193,31 @@ const handlefail=() => {
                           }}
                         >
                           <h5 className="mt-3 cart-h5">{product.name}</h5>
-                          
-
-
-                          <div
-                              className="cart-pricing"
-                             // style={{ marginLeft: "6rem" }}
+                          <h6>
+                            Color:{" "}
+                            <span
+                              style={{
+                                fontSize: "13px",
+                                fontWeight: 400,
+                                marginLeft: "0.4rem",
+                              }}
                             >
-                              <h6>Rs. {product.price}</h6>
-                            </div>
-                          <div className="cart-incr">
+                              Maroon
+                            </span>{" "}
+                          </h6>
+                          <h6>
+                            Size:{" "}
+                            <span
+                              style={{
+                                fontSize: "13px",
+                                fontWeight: 400,
+                                marginLeft: "0.4rem",
+                              }}
+                            >
+                              XXl
+                            </span>{" "}
+                          </h6>
+                          <div className="d-flex justify-content-between align-items-center cart-incr">
                             <div
                               style={{
                                 border: "1px solid #e3e3e3",
@@ -221,7 +225,6 @@ const handlefail=() => {
                                 padding: "0px",
                                 fontWeight: "bolder",
                               }}
-                              className="marg"
                             >
                               <Button onClick={() => handleCount(i, product, 'DECREMENT')}> &ndash;</Button>
                               <span>{product.count}</span>
@@ -229,9 +232,9 @@ const handlefail=() => {
                             </div>
                             <div
                               className="cart-pricing"
-                             // style={{ marginLeft: "6rem" }}
+                              style={{ marginLeft: "1rem" }}
                             >
-                              
+                              <h6>Rs.{product.price}</h6>
                             </div>
                           </div>
                         </div>
@@ -261,11 +264,15 @@ const handlefail=() => {
         <div className='col-md-4'>
           {items.length > 0 ? showItems(items) : noItemsMessage()}
         </div>
-       
+        {/*<div className='col-md-4'> 
+          <h2 className='mb-4'>Your cart summary</h2>
+          <hr />
+          <Checkout products={items} setRun={setRun} run={run} />
+  </div> */}
 
       </div>
 
-      
+      {/* <h2 className="mb-4">Your cart summary</h2> */}
       <hr />
       <div
 
@@ -301,7 +308,7 @@ const handlefail=() => {
                 type="text"
                 className="form-control"
                 id="name"
-                placeholder="pinto kumar"
+                placeholder=""
                 
                 required
               />
@@ -364,7 +371,7 @@ const handlefail=() => {
 
           
           <Button onClick={handleCheckout} className="d-flex justify-content-between bg-dark pt-3 pb-0 px-3 align-items-center "
-          style={{ color: "#fff", cursor: "pointer",justifyContent:"space-around  " }}>
+          style={{ color: "#fff", cursor: "pointer",padding:" 40px", marginLeft:"50px" ,textAlign:"center"}}>
         <div
           
         >

@@ -5,9 +5,11 @@ import Card from "./Card";
 import Link from "@material-ui/core/Link";
 import Search from "./Search";
 import Menu from "./Menu";
+import { Announcement } from "./Announcement";
 import "fontsource-roboto";
 import Copyright from "./Copyright";
 import MyCarousel from "./MyCarousal";
+import Footer from "./footer.js";
 
 const Home = () => {
   const [productsBySell, setProductsBySell] = useState([]);
@@ -41,13 +43,16 @@ const Home = () => {
 
   return (
     <>
-      <div style={{ padding: 25 }}></div>
+       
+
+      <div style={{ padding: 25 }}>
         <Menu />
-      
-      <div> <Search  /></div>
-       
+      </div>
+      <div  style={{marginTop:"15px"}}> <Search  /></div>
+
+      <Announcement/>
+
       <MyCarousel/>
-       
       <div className="container  py-3">
         <div className="row mt-3">
           <div className="col-md-12 h2-card">
@@ -103,7 +108,7 @@ const Home = () => {
           
         </div>
       </div>
-
+      <Footer/>
       <Copyright />
     </>
   );

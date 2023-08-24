@@ -1,0 +1,32 @@
+.announcement{
+    background: rgba(165, 128, 128, 0.425);
+    color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 80px;
+    padding: 0.5rem 0;
+    font-size:0.8rem;
+
+}
+
+
+.announcement-text{
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.text1 span{
+   margin-right: 2rem;
+}
+
+.text2 span:not(:last-child){
+     margin-right: 2rem;
+}
+
+.text2 span:last-child{
+    margin-right: 1 rem;
+}
+
+

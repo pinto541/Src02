@@ -266,17 +266,22 @@ const MaterialAppBar = ({ history }) => {
             <Typography className={classes.title} variant="h6" noWrap>
               WeUgly -
             </Typography>
-          </a> 
+          </a>
           <div className="menu-serch">
+          <Badge badgeContent={itemTotal()} color="secondary">
+
+           
+           <AiOutlineShoppingCart 
+              onClick={() => history.push("/cart")}/>
           
-          <Link style={isActive(history, "/cart")} to="/cart">
-              <IconButton aria-label="Cart" color="inherit">
-              <Badge badgeContent={itemTotal()} color="secondary">
-                  <ShoppingCartIcon />
-                </Badge>
-              </IconButton>
-            </Link>
+            </Badge>    
+
+      
+      
             
+           
+            
+
           </div>
           <div className={classes.grow} />
 

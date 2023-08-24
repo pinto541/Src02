@@ -70,7 +70,9 @@ const AddCategory = () => {
   );
 
   return (
-    <
+    <Layout
+      title='Add a new category'
+      description={`Hey ${user.name}, ready to add a new category?`}
     >
       <div className='row'>
         <div className='col-md-8 offset-md-2'>
@@ -80,7 +82,7 @@ const AddCategory = () => {
           {goBack()}
         </div>
       </div>
-    </>
+    </Layout>
   );
 };
 

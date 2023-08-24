@@ -4,7 +4,6 @@ import Button from '@material-ui/core/Button';
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
-import "./Product.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -17,6 +16,8 @@ import Card1 from "./Card";
 import Menu from "./Menu";
 import Copyright from "./Copyright";
 import ShowImageProd from "./ShowImageProd";
+import './Product.css'
+
 
 const Product = (props) => {
   
@@ -25,6 +26,12 @@ const Product = (props) => {
   const [error, setError] = useState(false);
   const [redirect, setRedirect] = useState(false);
   const [count, setCount] = useState(product.count);
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
 
   const loadSingleProduct = (productId) => {
     read(productId).then((data) => {
@@ -59,13 +66,12 @@ const Product = (props) => {
   const showAddToCartBtn = (showAddToCartButton) => {
     return (
       showAddToCartButton && (
-        <div className="center" style={{ textAlign: "center" }}>
-          <Button variant="contained" color="primary" onClick={addToCart}>Add to Cart </Button>
+        <div className="center" style={{textAlign:"center", margin:"auto"}}>
+        <Button variant="contained" color="white" onClick={addToCart} >Add to Cart</Button>
         </div>
       )
     );
   };
-  
  
 
 
@@ -127,10 +133,27 @@ const Product = (props) => {
               )}
             </div>
           </div>
-          <div className="center">
+          <div style={{ marginLeft:"33%",paddingTop:"5px"}}>
           {showAddToCartBtn(showAddToCartButton)}
           </div>
-          {/* <div className="row mt-4"> */}
+
+         
+
+          <label >
+          <div className="newline">
+          <div style={{padding:"20px", height:"20px",width:"13px", marginLeft:"112px"}}>
+          <select className="custom-select-size" value={selectedOption} onChange={handleChange}>
+            <option disabled value="">Select a Size</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="XL">XL</option>
+          </select>
+      </div>
+      </div>
+      </label>
+
+        
+         
           <div className="col-12 col-md-4  mt-3 p-4">
             <div className="desc">
               <h5>Description</h5>
@@ -138,7 +161,7 @@ const Product = (props) => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
                 accusamus vel nobis neque, exercitationem omnis ipsa totam
                 eveniet ex voluptas voluptatibus nesciunt quis, eos autem
-                aliquam perspiciatis iste aliquid quam?
+                aliquam perspiciatis iste aliquid quam
               </p>
             </div>
             <h5>Product Specification</h5>
